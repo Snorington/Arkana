@@ -27,7 +27,7 @@ services:
     build: .
     image: arkana-toolkit:latest
     ports:
-      - "127.0.0.1:${ARKANA_PORT:-${PEMCP_PORT:-8082}}:8082"
+      - "${ARKANA_PORT:-${PEMCP_PORT:-8082}}:8082"
     volumes:
       - ./samples:/samples:ro
       - ${ARKANA_OUTPUT:-${PEMCP_OUTPUT:-./output}}:/output:rw
